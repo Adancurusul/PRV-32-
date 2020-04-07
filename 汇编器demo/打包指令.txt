@@ -1,0 +1,1 @@
+pyinstaller -F -i p1.ico -w qt_test.py -p ass2hex.py

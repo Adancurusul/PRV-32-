@@ -1,5 +1,4 @@
-addi x0,x0,0x0000;
-
-addi x0,x0,0x0000;nop
-addi x0,x0,0x0000;nop
-add  x0,x0,0x0000
+addi x0,x0,0x0000
+addi x0,x0,0x0012
+addi x0,x0,0x0034
+addi x0,x0,0x0056

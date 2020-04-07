@@ -582,7 +582,7 @@ class MainWindow(QMainWindow):
             err = 1
         if fname[0]:  # 如果获取的路径非空
             with open('asm.txt',"r") as ass_file:
-                with open(fname[0],"w+") as bin_file:
+                with open("thirty_two.txt","w+") as bin_file:
                     print('ddddddifdisafsd')
                     print(fname[0])
                     for line in ass_file:
@@ -596,6 +596,26 @@ class MainWindow(QMainWindow):
                             if(not (line == '\n') ):
                                 QMessageBox.critical(self, "错误", "第"+str(line0)+"行出错未能生成bin\n"+line)
                             err = 1
+
+                with open("thirty_two.txt", "r+")as r:
+                    with open(fname[0], "w+")as r1:
+                        linenum = 0
+                        high = ""
+                        low = ""
+                        for line in r:
+                            print("linenow is :"+str(linenum))
+                            print(line)
+                            if linenum == 0:
+                                low = line
+                                linenum = 1
+                            elif linenum == 1:
+                                high = line.strip('\n')
+                                linenum = 0
+                                full = high + low
+
+                                r1.write(full)
+
+
         if not err:
             QMessageBox.about(self, "成功",
                           "成功生成bin于\n"+fname[0])
