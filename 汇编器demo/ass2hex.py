@@ -1,11 +1,8 @@
 #this is the first test of the prv32
 #author Adancurusul
-#
+#v0.10.1
 import re
 import array
-
-#str00 = 'addi x  7,x0,0x0008;asdfja;;21,,,,'
-
 
 global_label_data_dict = {}
 base = [str(x) for x in range(10)] + [ chr(x) for x in range(ord('A'),ord('A')+6)]
@@ -48,16 +45,6 @@ def bin2hex(string_num):
     return ''.join([str(x) for x in mid[::-1]])
 #def bin2hex(self.string_num):
 #   return dec2hex(bin2dec(string_num))
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -405,6 +392,8 @@ class change_into_bin(split_str):#直接将每行完成转化
         st =s[0:7] +self.change(5,self.list[1])+self.change(5,t)+'000'+s[7:12]+'0100011'
         return st
     def CSRRW(self):
+
+        print("in")
         st = self.do_with_fucking_csr(self.list[-2])+self.change(5,self.list[-1])+'001'+self.change(5,self.list[1])+'1110011'
         return st
     def CSRRS(self):

@@ -1,3 +1,4 @@
-00000000000000000000000000010011
-00000000000000000000000000010011
-00000000000000000000000000010011
+;this coe file is made by prv332 ide 
+;if you have any questions you can e-mail chen.yuheng@nexuslink.cn
+memory_initialization_radix = 2;
+memory_initialization_vector =
